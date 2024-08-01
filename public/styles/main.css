@@ -1,0 +1,41 @@
+body{
+    height:100%;
+    
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+#navbar h1 a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links{
+    text-decoration: none;
+    color:gray;
+    margin: auto 2vw;
+}
+
+.nav-lists{
+    list-style-type: none;
+}
+#nav-options{
+    display: inline-flex;
+    
+}
+
+.createdBlogs{
+    width:70vw;
+    height: 20vh;
+    background-color: rgb(231, 200, 170);
+    border-radius: 10px;
+    padding: 5vw;
+}
+#indexPage{
+    max-width: 80vw;
+    margin:0 10vw;
+}

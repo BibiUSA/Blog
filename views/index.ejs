@@ -1,0 +1,25 @@
+<%-include("partials/header.ejs") %>
+<div id="indexPage">
+<h2>Blog</h2>
+<div class="blog">
+    <form action ="/create" method ="POST">
+        <input type="submit" value="Create New Blog"/>
+    </form>
+</div>
+<div>
+    <% if(locals.duplication){ %>
+        <h2 class="duplicate">Duplicate Post</h2>
+    <%} %>
+    <% let itemIndex = -1 %>
+    <%const allBlogs =  blogs.map((item)=>{ %>
+        <%{itemIndex++} %>
+       <% return (`<div class="createdBlogs"><h2>${item.blogTitle}</h2><p>${item.blogText}</p><form action ="/delete" method ="POST"><input type="submit" value="Delete" name="${itemIndex}"/></form><form action ="/update" method ="POST"><input type="submit" value="Update" name="${itemIndex}"/></form></div>`) %>
+    <%}) %>
+    <%- allBlogs %>
+</div>
+</div>
+
+
+
+
+<%-include("partials/footer.ejs") %>

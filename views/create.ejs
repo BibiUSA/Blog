@@ -1,0 +1,18 @@
+<%-include("partials/header.ejs") %>
+<h2>Write Your Blog</h2>
+<div class="blog">
+    <form action ="/done" method ="POST">
+        <textarea id="blogTitle" name="blogTitle" rows="1" columns = "200" placeholder="Title" required><%= locals.title || null %></textarea>
+        <br>
+        <textarea id="blogText" name ="blogText" rows ="10" columns ="100" placeholder="body"><%=  locals.text || null %></textarea>
+        <br>
+        <input type="submit" value="Add Blog"/>
+    </form>
+</div>
+
+
+
+
+
+
+<%-include("partials/footer.ejs") %>
